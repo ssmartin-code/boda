@@ -179,7 +179,7 @@ body{
   padding:54px 30px 90px;}
 
 /* ---- Slide 1: portada (logo + fecha) ---- */
-#s1{justify-content:center;text-align:center;
+#s1{justify-content:flex-start;text-align:center;
   background:
     radial-gradient(110% 80% at 50% -10%, var(--crema) 0%, var(--crema-2) 100%);
 }
@@ -191,11 +191,11 @@ body{
 #s1 .marco::after{bottom:-1px;right:-1px;border-left:0;border-top:0;}
 
 .eyebrow{font-family:var(--display);letter-spacing:.5em;text-transform:uppercase;
-  font-size:.72rem;color:var(--verde-2);padding-left:.5em;margin-bottom:8px;}
-.logo-monograma{height:225px;width:auto;display:block;margin:34px auto 4px;
+  font-size:.72rem;color:var(--verde-2);padding-left:.5em;margin:auto auto 8px;}
+.logo-monograma{height:200px;width:auto;display:block;margin:18px auto 4px;
   filter:drop-shadow(0 4px 10px rgba(176,141,87,.25));}
-.nombres{font-family:var(--script);font-size:4.4rem;line-height:.95;color:var(--verde);
-  margin:10px 0 0;}
+.nombres{font-family:var(--script);font-weight:400;font-size:4.4rem;line-height:.95;color:var(--verde);
+  margin:8px 0 0;}
 .amp{display:block;font-size:2.2rem;color:var(--oro);margin:-6px 0;}
 .subtitulo{font-family:var(--display);letter-spacing:.3em;text-transform:uppercase;
   font-size:.78rem;color:var(--tinta);opacity:.8;margin-top:10px;}
@@ -203,7 +203,7 @@ body{
   color:var(--verde-2);max-width:280px;margin:14px auto 0;}
 .fecha-grande{font-family:var(--display);font-weight:500;font-size:2.5rem;color:var(--tinta);
   margin-top:22px;letter-spacing:.02em;}
-.fecha-linea{display:flex;align-items:center;gap:14px;margin:14px auto 0;
+.fecha-linea{display:flex;align-items:center;gap:14px;margin:14px auto auto;
   font-family:var(--display);letter-spacing:.25em;text-transform:uppercase;
   font-size:.8rem;color:var(--verde-2);}
 .fecha-linea::before,.fecha-linea::after{content:"";width:34px;height:1px;background:var(--oro);}
