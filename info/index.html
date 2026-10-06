@@ -790,6 +790,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
   .map-hint{font-size:.72rem;color:var(--sage-dim);margin:0 0 4px}
   .leaflet-container{font-family:"Jost",sans-serif;background:#0b1914}
+  .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) saturate(.45) brightness(.85) contrast(.92)}
   .leaflet-control-attribution{background:rgba(14,33,26,.8)!important;color:var(--sage-dim)!important;font-size:9px}
   .leaflet-control-attribution a{color:var(--sage)!important}
   .leaflet-bar a{background:var(--paper)!important;color:var(--brass)!important;border-color:var(--hair)!important}
@@ -944,10 +945,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   if (typeof L === "undefined"){ mapEl.hidden = true; document.getElementById("mapHint").hidden = true; return; }
 
   map = L.map(mapEl, { scrollWheelZoom:false, dragging:!L.Browser.mobile, tap:false, zoomSnap:0.5 });
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    maxZoom:19, subdomains:"abcd",
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom:19,
     errorTileUrl:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
   markers = PARADAS.map(function(p, i){
