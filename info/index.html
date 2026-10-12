@@ -72,7 +72,7 @@
 	display: block;
 	}
 /* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
-/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+/* .leaflet-container img: map is broken in FF if you have max-width: 0% on tiles */
 .leaflet-container .leaflet-overlay-pane svg {
 	max-width: none !important;
 	max-height: none !important;
@@ -141,7 +141,7 @@
 .leaflet-tooltip-pane   { z-index: 650; }
 .leaflet-popup-pane   { z-index: 700; }
 
-.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane canvas { z-index: 0; }
 .leaflet-map-pane svg    { z-index: 200; }
 
 .leaflet-vml-shape {
@@ -160,13 +160,13 @@
 .leaflet-control {
 	position: relative;
 	z-index: 800;
-	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: visiblePainted; /* IE 9- doesn't have auto */
 	pointer-events: auto;
 	}
 .leaflet-top,
 .leaflet-bottom {
 	position: absolute;
-	z-index: 1000;
+	z-index: 00;
 	pointer-events: none;
 	}
 .leaflet-top {
@@ -189,16 +189,16 @@
 	float: right;
 	}
 .leaflet-top .leaflet-control {
-	margin-top: 10px;
+	margin-top: px;
 	}
 .leaflet-bottom .leaflet-control {
-	margin-bottom: 10px;
+	margin-bottom: px;
 	}
 .leaflet-left .leaflet-control {
-	margin-left: 10px;
+	margin-left: px;
 	}
 .leaflet-right .leaflet-control {
-	margin-right: 10px;
+	margin-right: px;
 	}
 
 
@@ -279,7 +279,7 @@ svg.leaflet-zoom-animated {
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
 svg.leaflet-image-layer.leaflet-interactive path {
-	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: visiblePainted; /* IE 9- doesn't have auto */
 	pointer-events: auto;
 	}
 
@@ -843,7 +843,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <p>La celebración empieza a las <strong>18:30</strong>. Quienes solicitasteis el autobús podéis cogerlo en cualquiera de estas tres paradas de Oviedo.</p>
 
     <div class="notice">
-      Los horarios son de <strong>salida</strong> y el autobús sale puntual. Por favor, estad en la parada <strong>al menos 10 minutos antes</strong>.
+      Los horarios son de <strong>salida</strong> y el autobús sale puntual. Por favor, estad en la parada <strong>al menos 5 minutos antes</strong>.
     </div>
 
     <h3>Ida</h3>
