@@ -884,17 +884,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   /* =========================================================
      PARADAS DEL AUTOBÚS — edita solo este bloque.
-     "llegar" se calcula solo: 10 minutos antes de la salida.
+     "llegar" se calcula solo: 5 minutos antes de la salida.
      ========================================================= */
   var PARADAS = [
-    { hora:"17:30", nombre:"Hotel EXE", detalle:"Junto a la estación de autobuses",
+    { hora:"17:20", nombre:"Hotel EXE", detalle:"Junto a la estación de autobuses.Parada propia del Hotel",
       lat:43.367763, lng:-5.852518, url:"https://maps.app.goo.gl/riVXa3NLmK7KezV78", foto:"parada-1.jpg" },
     { hora:"17:35", nombre:"La Paz", detalle:"Parada de bus delante de Carrefour",
       lat:43.3565612, lng:-5.85717, url:"https://maps.app.goo.gl/gkWbr1yxVKLXrytGA", foto:"parada-2.jpg" },
     { hora:"17:45", nombre:"La Florida", detalle:"Parada de bus de Adelantado de La Florida",
       lat:43.3643649, lng:-5.8392351, url:"https://maps.app.goo.gl/gjuDVs1ivuw1fAp8A", foto:"parada-3.jpg" }
   ];
-  var MARGEN_MIN = 10;
+  var MARGEN_MIN = 5;
 
   function menos(hora, min){
     var p = hora.split(":"), t = (+p[0]) * 60 + (+p[1]) - min;
